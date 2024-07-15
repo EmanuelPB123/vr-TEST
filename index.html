@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR.js with a 3D Model</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.0/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs="sourceType: webcam;">
+      <!-- Definir el marcador -->
+      <a-marker preset="hiro">
+        <!-- Agregar el modelo 3D -->
+        <a-entity 
+          position="0 0 0" 
+          rotation="0 0 0" 
+          scale="0.5 0.5 0.5" 
+          gltf-model="url(https://cdn.glitch.global/5d492924-3011-4727-b5bc-208dc7aa1bc6/scene.gltf?v=1619537754015)">
+        </a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
